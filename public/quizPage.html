@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/quiz.css" />
+    <!-- <link rel="stylesheet" href="/styles.css" /> -->
+    <title>Quizzzzzz!</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Quiz to Learn</h1>
+        <a href="home.html">Home</a>
+      </nav>
+    </header>
+    <div class="container">
+      <div id="quiz-card">
+       <div class="card-header">
+
+         <div id="question-header">
+           <p id="quiz-question" class="bold-font">Question: </p>
+           <p id="quiz-qustion-id" class="bold-font">0</p>
+          </div>
+          <div id="score">
+            <p id="score-text" class="bold-font">Score: </p>
+            <p id="scoreValue" class="bold-font">0</p>
+          </div>
+        </div>
+
+        <div id="question" class="bold-font">What is the Answer?</div>
+
+        <div class="choice_answers">
+          <ul>
+            <li>
+              <input type="radio" id="choice1" name="choice" value="0"  >
+              <label for="choice1" class="choice_text" id="chT1">Choice 1</label>
+            </li>
+            <li>
+              <input type="radio" id="choice2" name="choice" value="1" >
+              <label for="choice2" class="choice_text" id="chT2">Choice 2</label>
+            </li>
+            <li>
+              <input type="radio" id="choice3" name="choice" value="2">
+              <label for="choice3" class="choice_text" id="chT3">Choice 3</label>
+            
+            </li>
+            <li>
+              <input type="radio" id="choice4" name="choice" value="3">
+              <label for="choice4" class="choice_text" id="chT4">Choice 4</label>
+            
+            </li>
+          </ul>
+        
+      </div>
+      <div id="submit-container">
+        <button id="submit-btn" type="submit">Submit</button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/quiz.js"></script>
+  </body>
+</html>

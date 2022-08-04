@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "question": "What is 2*2?",
+    "answerArr": [1, 2, 3, 4],
+    "subject": "math",
+    "answer": 3
+  },
+  {
+    "id": 2,
+    "question": "Find the One word with the Long a sound",
+    "answerArr": ["bone", "base", "tried", "cap"],
+    "subject": "english",
+    "answer": 1
+  },
+  {
+    "id": 3,
+    "question": "I ___ good at climbing trees",
+    "answerArr": ["am", "is", "are", "was"],
+    "subject": "english",
+    "answer": 0
+  },
+  {
+    "id": 4,
+    "question": "I have to ___ my homework.",
+    "answerArr": ["does", "do", "done", "did"],
+    "subject": "english",
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "question": "Find a rhyming word for SEA",
+    "answerArr": ["Key", "Say", "cram", "ya"],
+    "subject": "english",
+    "answer": 0
+  },
+  {
+    "id": 6,
+    "question": "What are Nouns?",
+    "answerArr": [
+      "Names actions",
+      "Substitute other nouns",
+      "Describe actions",
+      "Name people, animals, places, events, and things"
+    ],
+    "subject": "english",
+    "answer": 3
+  },
+  {
+    "id": 7,
+    "question": "What is the plural form of Banana?",
+    "answerArr": ["Bananas", "Bananae", "Banana", "Bananaes"],
+    "subject": "english",
+    "answer": 0
+  },
+
+  {
+    "id": 8,
+    "question": "______ comes just before 413.",
+    "answerArr": ["403", "412", "410", "414"],
+    "subject": "math",
+    "answer": 1
+  },
+
+  {
+    "id": 9,
+    "question": "In 289, the place value of 8 is____________.",
+    "answerArr": ["Ones", "Hundreds", "Tens", "Thousands"],
+    "subject": "math",
+    "answer": 2
+  },
+
+  {
+    "id": 10,
+    "question": "232, 242, ____ , 262. The missing number in the pattern is ____.",
+    "answerArr": ["222", "225", "252", "243"],
+    "subject": "math",
+    "answer": 2
+  },
+
+  {
+    "id": 11,
+    "question": "10+43+34=____",
+    "answerArr": ["87", "77", "104334", "197"],
+    "subject": "math",
+    "answer": 0
+  }
+]

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Quiz to Learn</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Quiz to Learn</h1>
+        <a href="flashcard.html" id="flashcard">Flashcard</a>
+      </nav>
+    </header>
+    <section id="displayQuotes"><marquee> </marquee></section>
+    <div class="container">
+      <div class="sub-header"><h1>Select the Quiz</h1></div>
+      <div class="subject-container">
+        <a href="/quizPage.html" class="btn subject" id="english">English</a>
+        <a href="/quizPage.html" class="btn subject" id="math">Math</a>
+        <a href="/quizPage.html" class="btn subject" id="science">Science</a>
+      </div>
+    </div>
+    <div class="flashcard"></div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/home.js"></script>
+    <!-- <script src="/quiz.js"></script> -->
+  </body>
+</html>

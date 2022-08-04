@@ -1,0 +1,122 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  width: 100vw;
+  height: 100px;
+  text-align: center;
+  align-content: center;
+  font-size: 2.4rem;
+  background-color: rgb(134, 235, 235);
+}
+nav a {
+  float: right;
+  padding-right: 2rem;
+  display: block;
+  font-size: 1.5rem;
+}
+.container {
+  display: flex;
+  /* width: 90; */
+  padding: 1rem;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eceef5;
+}
+.add-flashcard-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.2rem 1rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+}
+.add-flashcard-container button {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #587ef4;
+  color: white;
+}
+.input-card-container {
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  height: 300px;
+  display: flex;
+}
+.input-card {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid gray;
+  margin: auto;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+}
+input,
+textarea {
+  width: 85%;
+  height: 40px;
+  padding: 1rem;
+  border: none;
+  border-bottom: 2px solid #080808;
+  color: #232323;
+  margin: 10px;
+}
+.input-card-container button {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #587ef4;
+  color: white;
+  margin: auto;
+}
+.hide {
+  display: none;
+}
+#card-list-container {
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.flash-card {
+  padding: 1px;
+  display: flex;
+  width: 200px;
+  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #eebe8f;
+}
+.flash-topic {
+  font-size: 25px;
+  margin-bottom: 5px;
+  text-align: center;
+  min-width: 150px;
+  border-bottom: 1px solid gray;
+}
+.flash-answer {
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
+.delete {
+  background-color: #eebe8f;
+  border: none;
+}

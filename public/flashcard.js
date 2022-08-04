@@ -8,6 +8,7 @@ const getAllFlashcard = () =>
     .get(baseURL)
     .then((res) => {
       let { data: flashcardsArr } = res;
+      console.log(res.data)
       displayFlashCard(flashcardsArr);
     })
     .catch((err) => console.log(err));
@@ -16,8 +17,7 @@ const deleteFlashcard = (id) =>
   axios
     .delete(`${baseURL}/${id}`)
     .then((res) => {
-      let { data: flashcardsArr } = res;
-      displayFlashCard(flashcardsArr);
+      getAllFlashcard();
     })
     .catch((err) => console.log(err));
 
@@ -67,12 +67,10 @@ const postFlashcard = (body) => {
   axios
     .post(baseURL, body)
     .then((res) => {
-      let { data: flashcardsArr } = res;
-      displayFlashCard(flashcardsArr);
+      getAllFlashcard();
     })
     .catch((err) => console.log(err));
 };
-
 addFlashCardBtn.addEventListener("click", showInputCardContainer);
 form.addEventListener("submit", submitEventHadler);
 getAllFlashcard();

@@ -1,3 +1,16 @@
+require("dotenv").config();
+const { DATABASE_URL } = process.env;
+// const { CommandCompleteMessage } = require("pg-protocol/dist/messages");
+const Sequelize = require("sequelize");
+const sequelize = new Sequelize(DATABASE_URL, {
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
+});
+
 const Quotes = [
   `Mistakes are proof that you are trying.`,
   `Success is stumbling from failure to failure with no loss of enthusiasm.`,
@@ -20,44 +33,29 @@ const Quotes = [
   `Education is a gift that none can take away.`,
 ];
 
-let flashcardsArr = [
-  {
-    id: 1,
-    topic: "Css",
-    answer: "Cascading Style Sheet . Used for styling Web Page",
-  },
-  {
-    id: 2,
-    topic: "html",
-    answer: "Hyper Text Markup lanuguage",
-  },
-];
-let globalID = 3;
-
 const quizArr = require("./db.json");
-//console.log(quizArr);
 let newQuizArr = [];
 module.exports = {
-  // seed: (req, res) => {
-  //   sequelize
-  //     .query(
-  //       `DROP table  if exists flashcard_details;
-  //       create table flashcard_details (
-  //                      id serial primary key,
-  //                      topic varchar,
-  //                      answer varchar
-  //                  );
+  seed: (req, res) => {
+    sequelize
+      .query(
+        `DROP table  if exists flashcard_details;
+        create table flashcard_details (
+                       id serial primary key,
+                       topic varchar(255),
+                       answer varchar(255)
+                   );
 
-  //      INSERT into flashcard_details (topic , Answer) values
-  //      ('Css','Cascading Style Sheet . Used for styling Web Page'),('html',
-  //          'Hyper Text Markup lanuguage')`
-  //     )
-  //     .then(() => {
-  //       console.log("Database seeded!");
-  //       res.sendStatus(200);
-  //     })
-  //     .catch((err) => console.log("error seeding DataBase", err));
-  // },
+       INSERT into flashcard_details (topic , answer) values
+       ('Css','Cascading Style Sheet . Used for styling Web Page'),('html',
+           'Hyper Text Markup lanuguage')`
+      )
+      .then(() => {
+        console.log("Database seeded!");
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log("error seeding DataBase", err));
+  },
   getInspireQuotes: (req, res) => {
     let randomIndex = Math.floor(Math.random() * Quotes.length);
     let randomQuote = Quotes[randomIndex];
@@ -72,23 +70,32 @@ module.exports = {
   },
   createFlashcard: (req, res) => {
     const { topic, answer } = req.body;
-    let newFlashCard = {
-      id: globalID,
-      topic,
-      answer,
-    };
-    flashcardsArr.push(newFlashCard);
-    // console.log(flashcardsArr);
-
-    res.status(200).send(flashcardsArr);
-    globalID++;
+    sequelize
+      .query(
+        `INSERT into flashcard_details (topic , answer) values ('${topic}','${answer}');`
+      )
+      .then((dbres) => res.status(200).send(dbres[0]))
+      .catch((err) =>
+        console.log("error in  getting creating flashcard  ", err)
+      );
   },
   getAllFlashcard: (req, res) => {
-    res.status(200).send(flashcardsArr);
+    sequelize
+      .query(` select * from flashcard_details; `)
+      .then((dbres) => {
+        res.status(200).send(dbres[0]);
+      })
+      .catch((err) => console.log("error in  getting all flashcards ", err));
   },
   deleteFlashcard: (req, res) => {
-    let index = flashcardsArr.findIndex((flash) => flash.id === +req.params.id);
-    flashcardsArr.splice(index, 1);
-    res.status(200).send(flashcardsArr);
+    let { id } = req.params;
+    console.log(id);
+    sequelize
+      .query(`DELETE from flashcard_details where id = ${id};`)
+      .then((dbres) => {
+        
+        res.status(200).send(dbres[0]);
+      })
+      .catch((err) => console.log("error in  deleting all flashcards ", err));
   },
 };

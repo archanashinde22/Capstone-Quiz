@@ -67,6 +67,7 @@ button {
   border: 1px solid gray;
   margin: auto;
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
 }
 input,
 textarea {
@@ -83,7 +84,7 @@ textarea {
   font-weight: bold;
   background-color: #587ef4;
   color: white;
-  margin: auto;
+  margin-top: 20px;
 }
 .hide {
   display: none;
@@ -92,10 +93,10 @@ textarea {
   display: flex;
   align-content: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .flash-card {
-  padding: 1px;
   display: flex;
   width: 200px;
   margin: 20px;
@@ -117,6 +118,11 @@ textarea {
   padding: 10px;
 }
 .delete {
+  margin-top: auto;
   background-color: #eebe8f;
   border: none;
+}
+form {
+  text-align: center;
+  background-color: white;
 }

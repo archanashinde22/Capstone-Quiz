@@ -38,6 +38,26 @@ const quizArr = require("./db.json");
 //console.log(quizArr);
 let newQuizArr = [];
 module.exports = {
+  // seed: (req, res) => {
+  //   sequelize
+  //     .query(
+  //       `DROP table  if exists flashcard_details;
+  //       create table flashcard_details (
+  //                      id serial primary key,
+  //                      topic varchar,
+  //                      answer varchar
+  //                  );
+
+  //      INSERT into flashcard_details (topic , Answer) values
+  //      ('Css','Cascading Style Sheet . Used for styling Web Page'),('html',
+  //          'Hyper Text Markup lanuguage')`
+  //     )
+  //     .then(() => {
+  //       console.log("Database seeded!");
+  //       res.sendStatus(200);
+  //     })
+  //     .catch((err) => console.log("error seeding DataBase", err));
+  // },
   getInspireQuotes: (req, res) => {
     let randomIndex = Math.floor(Math.random() * Quotes.length);
     let randomQuote = Quotes[randomIndex];
@@ -58,7 +78,7 @@ module.exports = {
       answer,
     };
     flashcardsArr.push(newFlashCard);
-    // console.log(flashcardsArr);rs
+    // console.log(flashcardsArr);
 
     res.status(200).send(flashcardsArr);
     globalID++;

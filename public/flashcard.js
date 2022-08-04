@@ -27,7 +27,7 @@ const createdisplayflashCard = (flashcard) => {
 
   card.innerHTML = `<p class="flash-topic">${flashcard.topic}</p>
           <p class="flash-answer">${flashcard.answer}</p>
-          <button   class="delete" onclick="deleteFlashcard(${flashcard.id})">delete</button>
+          <button   class="delete" onclick="deleteFlashcard(${flashcard.id})">X</button>
           `;
   cardListContainer.appendChild(card);
 };
@@ -48,15 +48,19 @@ const submitEventHadler = (evt) => {
 
   let topic = document.querySelector("#topic");
   let answer = document.querySelector("#answer");
-  let flashcardObj = {
-    topic: topic.value,
-    answer: answer.value,
-  };
-  inputCardContainer.classList.add("hide");
-  postFlashcard(flashcardObj);
+  if (topic.value === "" || answer.value === "") {
+    alert("Topic and answer cannot be Empty ");
+  } else {
+    let flashcardObj = {
+      topic: topic.value,
+      answer: answer.value,
+    };
+    inputCardContainer.classList.add("hide");
+    postFlashcard(flashcardObj);
 
-  topic.value = "";
-  answer.value = "";
+    topic.value = "";
+    answer.value = "";
+  }
 };
 // will create new flash card ... Post request is used for this
 const postFlashcard = (body) => {

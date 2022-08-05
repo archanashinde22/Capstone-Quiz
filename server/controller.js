@@ -1,6 +1,5 @@
 require("dotenv").config();
 const { DATABASE_URL } = process.env;
-// const { CommandCompleteMessage } = require("pg-protocol/dist/messages");
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(DATABASE_URL, {
   dialect: "postgres",
@@ -93,7 +92,6 @@ module.exports = {
     sequelize
       .query(`DELETE from flashcard_details where id = ${id};`)
       .then((dbres) => {
-        
         res.status(200).send(dbres[0]);
       })
       .catch((err) => console.log("error in  deleting all flashcards ", err));

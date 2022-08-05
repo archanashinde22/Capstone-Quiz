@@ -22,12 +22,8 @@ const getQuizs = () => {
     .then((res) => {
       questionArr = res.data;
       availableQuestions = questionArr;
-      // console.log("1 ", availableQuestions);
-      // console.log("1 ", availableQuestions.length);
-
       currentQuestion = availableQuestions[0];
       displayNextQuestion();
-      // console.log("2 ", availableQuestions.length);
       availableQuestions.splice(0, 1);
     })
     .catch((err) => console.log(err));
@@ -37,7 +33,7 @@ const displayNextQuestion = () => {
   if (questionCounter < MAX_QUESTION) {
     questionCounter++;
     questionNo.textContent = `${questionCounter} of ${MAX_QUESTION}`;
-    // let scoretoDisplay = score * (100 / MAX_QUESTION);
+
     scoreValue.textContent = displayScore;
 
     question.textContent = currentQuestion.question;
@@ -59,13 +55,8 @@ const checkAnswer = () => {
     console.log(score);
   }
 
-  // console.log("3 ", availableQuestions.length);
   const randQuizIndex = Math.floor(Math.random() * availableQuestions.length);
-  // console.log(randQuizIndex);
-  // console.log("2 ", availableQuestions);
-  // console.log("3 ", availableQuestions.length);
   currentQuestion = availableQuestions[randQuizIndex];
-  // console.log(currentQuestion);
   displayNextQuestion();
   availableQuestions.splice(randQuizIndex, 1);
 };

@@ -46,10 +46,10 @@ button {
   border-radius: 0.3rem;
 }
 .add-flashcard-container button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  background-color: #587ef4;
-  color: white;
+  color: rgb(241, 230, 230);
+  background-color: rgb(27, 25, 23);
 }
 .input-card-container {
   position: absolute;
@@ -75,15 +75,16 @@ textarea {
   height: 40px;
   padding: 1rem;
   border: none;
+  font-size: 1 rem;
   border-bottom: 2px solid #080808;
   color: #232323;
   margin: 10px;
 }
 .input-card-container button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  background-color: #587ef4;
-  color: white;
+  color: rgb(241, 230, 230);
+  background-color: rgb(27, 25, 23);
   margin-top: 20px;
 }
 .hide {
@@ -105,6 +106,7 @@ textarea {
   border-radius: 10px;
   background-color: #eebe8f;
 }
+
 .flash-topic {
   padding: 10px;
   font-size: 25px;

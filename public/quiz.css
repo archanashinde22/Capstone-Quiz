@@ -81,10 +81,6 @@ nav a {
 .choice_text {
   padding: 1rem;
 }
-.choice_text :active {
-  color: blue;
-  box-shadow: inset 0 0 14px red;
-}
 .bold-font {
   font-size: 1.5rem;
   font-weight: bold;
@@ -95,8 +91,8 @@ nav a {
   padding: 1rem;
   width: 10rem;
   text-align: center;
-  color: black;
-  background-color: rgb(195, 138, 100);
+  color: rgb(241, 230, 230);
+  background-color: rgb(27, 25, 23);
   border-radius: 5px;
   text-decoration: none;
 }

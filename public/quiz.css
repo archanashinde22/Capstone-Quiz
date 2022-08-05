@@ -54,21 +54,29 @@ nav a {
   justify-content: center;
   padding-bottom: 1rem;
 }
-
+.choice-container {
+  display: flex;
+  flex-direction: row;
+}
 .choice_answers {
   display: flex;
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 70%;
   background: rgb(149, 149, 218);
   margin-bottom: 1rem;
   border-radius: 5px;
   padding: 1.5rem;
+
   /* font-size: rem; */
+}
+.img-container {
+  width: 30%;
 }
 .choice_answers ul li {
   max-width: 100%;
   position: relative;
   height: 2.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.6rem;
 }

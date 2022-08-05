@@ -6,6 +6,8 @@
 body {
   width: 100vw;
   height: 100vh;
+  /* background-color: #fff1e6; */
+  background-image: "public\bg.jfif";
 }
 
 nav {

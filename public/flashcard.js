@@ -8,7 +8,7 @@ const getAllFlashcard = () =>
     .get(baseURL)
     .then((res) => {
       let { data: flashcardsArr } = res;
-      console.log(res.data)
+      console.log(res.data);
       displayFlashCard(flashcardsArr);
     })
     .catch((err) => console.log(err));
@@ -31,7 +31,7 @@ const createdisplayflashCard = (flashcard) => {
           `;
   cardListContainer.appendChild(card);
 };
-
+// display all flashcard on front web
 const displayFlashCard = (cardArr) => {
   cardListContainer.textContent = "";
   for (let i = 0; i < cardArr.length; i++) {

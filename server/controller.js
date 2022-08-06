@@ -46,8 +46,9 @@ module.exports = {
                    );
 
        INSERT into flashcard_details (topic , answer) values
-       ('Css','Cascading Style Sheet . Used for styling Web Page'),('html',
-           'Hyper Text Markup lanuguage')`
+       ('Pronoun','A pronoun is a word that is used instead of a noun or noun phrase'),('Adjective 
+       ',' An adjective is a word that describe a noun or pronoun and provide more information about it.
+           ')`
       )
       .then(() => {
         console.log("Database seeded!");

@@ -3,6 +3,7 @@ const inputCardContainer = document.querySelector("#input-card");
 const form = document.querySelector("form");
 const baseURL = "http://localhost:4000/api/flash";
 const cardListContainer = document.querySelector("#card-list-container");
+
 const getAllFlashcard = () =>
   axios
     .get(baseURL)
@@ -27,7 +28,7 @@ const createdisplayflashCard = (flashcard) => {
 
   card.innerHTML = `<p class="flash-topic">${flashcard.topic}</p>
           <p class="flash-answer">${flashcard.answer}</p>
-          <button   class="delete" onclick="deleteFlashcard(${flashcard.id})">X</button>
+          <button   class="delete" onclick="deleteFlashcard(${flashcard.id})">Delete</button>
           `;
   cardListContainer.appendChild(card);
 };

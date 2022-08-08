@@ -137,6 +137,7 @@ textarea {
   /* background-color: #eebe8f; */
   background-color: transparent;
   border: none;
+  font-size: 18px;
 }
 .delete:hover {
   margin-top: auto;

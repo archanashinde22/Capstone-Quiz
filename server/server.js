@@ -25,5 +25,5 @@ app.get(`/api/inspireQuote`, getInspireQuotes);
 app.delete(`/api/flash/:id`, deleteFlashcard);
 app.get(`/api/flash`, getAllFlashcard);
 
-const { SERVER_PORT } = process.env;
+const SERVER_PORT = process.env.PORT || 4000;
 app.listen(SERVER_PORT, () => console.log(`server running on ${SERVER_PORT}`));

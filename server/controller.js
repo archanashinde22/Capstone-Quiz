@@ -1,7 +1,7 @@
 require("dotenv").config();
-const { DATABASE_URL } = process.env;
+const { HEROKU_POSTGRESQL_ONYX_URL } = process.env;
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(DATABASE_URL, {
+const sequelize = new Sequelize(HEROKU_POSTGRESQL_ONYX_URL, {
   dialect: "postgres",
   dialectOptions: {
     ssl: {

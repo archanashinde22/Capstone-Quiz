@@ -10,7 +10,7 @@ let score = 0;
 let displayScore = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-const MAX_QUESTION = 5;
+const MAX_QUESTION = 4;
 
 console.log("Quiz.js :", subjectChoice);
 const baseURL = "http://localhost:4000";

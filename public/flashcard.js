@@ -1,7 +1,7 @@
 const addFlashCardBtn = document.querySelector("#add-flashcard");
 const inputCardContainer = document.querySelector("#input-card");
 const form = document.querySelector("form");
-const baseURL = "http://localhost:4000/api/flash";
+const baseURL = "/api/flash";
 const cardListContainer = document.querySelector("#card-list-container");
 
 const getAllFlashcard = () =>

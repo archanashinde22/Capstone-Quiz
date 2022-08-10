@@ -13,12 +13,12 @@ let availableQuestions = [];
 const MAX_QUESTION = 4;
 
 console.log("Quiz.js :", subjectChoice);
-const baseURL = "http://localhost:4000";
+// const baseURL = "http://localhost:4000";
 
-console.log(`${baseURL}/api/quiz/${subjectChoice}`);
+console.log(`/api/quiz/${subjectChoice}`);
 const getQuizs = () => {
   axios
-    .get(`${baseURL}/api/quiz/${subjectChoice}`)
+    .get(`/api/quiz/${subjectChoice}`)
     .then((res) => {
       questionArr = res.data;
       availableQuestions = questionArr;

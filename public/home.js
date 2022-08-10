@@ -1,11 +1,11 @@
 //get element to display Quotes
 const displayQuotes = document.getElementById("displayQuotes");
 const subjectbtn = document.getElementsByClassName("subject");
-const baseURL = "http://localhost:4000";
+// const baseURL = "http://localhost:4000";
 // Function will get Quotes from server and display it
 const getInspireQuotes = () => {
   displayQuotes.innerHTML = null;
-  axios.get(`${baseURL}/api/inspireQuote`).then((res) => {
+  axios.get(`/api/inspireQuote`).then((res) => {
     console.log(res.data);
     const quotepara = document.createElement("p");
     quotepara.innerHTML = ` <marquee >${res.data}</marquee>`;

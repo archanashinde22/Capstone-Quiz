@@ -1,7 +1,7 @@
 Quiz to Learn:
 For my Capstone Project I made a Flashcard and quiz Application.
 
-##Technlogies: Javascript, HTML, CSS, Axios , Express, Node.js, postresSQL
+##Technlogies Stack: Javascript, HTML, CSS, Axios , Express, Node.js, postresSQL
 
 Home page will show random inspirational quote.We can select the subject for quiz. Once we select subject, We will be navigated to Quiz page.
 Question related to subject will be displayed on quiz page.
